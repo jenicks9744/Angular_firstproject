@@ -1,0 +1,21 @@
+<h1>Test component</h1>
+
+
+
+<!-- property binding -->
+<!-- src should be inside square brackets and image is from test.components.ts -->
+<img [src]="image" alt="pineapple" width="90px" height="70px" id="images">
+<br>
+<label for="name">Enter your name</label>
+<input [id]="myid" type="text">
+<br>
+<label for="">Enter the last name</label>
+<input [id]="myid" type="text" [disabled]="isEnabled">
+
+<!-- button binding -->
+<button (click)="imgChange()">click here</button>
+
+
+
+
+
