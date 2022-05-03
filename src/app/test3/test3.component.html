@@ -1,0 +1,80 @@
+<p>test3 works!</p>
+<!-- template referance variable -->
+<div>
+    <label for="">enter your first name</label>
+    <input  type="text" #firstname><br>
+    <label for="">Enter your last name</label>
+    <input  type="text" #lastname>
+
+    <div>
+        <button (click)="greet(firstname,lastname)">Add</button>
+    </div>
+    <div>
+      <!-- for working ngmodel,we have to import FormsModule in app.module  -->
+      <input [(ngModel)]="name"  type="text">
+      <br>
+      {{name}}
+    </div>
+
+
+
+
+</div>
+
+
+
+<!-- structural directives -->
+<!-- ngif,ngFor,ngselect -->
+
+<div *ngIf="!displayName; else display">
+  this is ng if tag:
+  <!-- it does not show on the website console -->
+
+
+</div>
+
+<ng-template #display>
+  sorry no name to display
+</ng-template>
+<br>
+
+<button class="btn btn-primary">this is a button</button>
+
+<br>
+
+<!-- ng switch -->
+<div [ngSwitch] = "displayColor">
+  <div *ngSwitchCase ="'red'" >You are selected red color</div>
+  <div *ngSwitchCase ="'Blue'" >You are selected Blue color</div>
+  <div *ngSwitchCase ="'green'" >You are selected green color</div>
+  <div *ngSwitchDefault>this is not available</div>
+</div>
+
+<div class="card-body">
+<input type="text" [(ngModel)]="number">
+<div [ngSwitch]="number">
+  <div *ngSwitchCase="'1'">one</div>
+  <div *ngSwitchCase="'2'">two</div>
+  <div *ngSwitchCase="'3'">three</div>
+  <div *ngSwitchCase="'4'">four</div>
+  <div *ngSwitchCase="'5'">five</div>
+  <div *ngSwitchDefault>invaild</div>
+</div>
+</div>
+<p>-------------------------------------------------------------</p>
+<!-- ngFor -->
+<div *ngFor = "let person of persons ; index as i ; last as l; first as f ; odd as o" class="container">
+  <div class="container">{{f}} {{i}} {{person}} {{l}} {{o}}</div>
+</div>
+<div>
+  <select (change)="changePerson($event)" name="person">
+    <option *ngFor="let person of persons">{{person}}</option>
+  </select>
+</div>
+<p>-------------------------------------------------------------</p>
+
+
+
+
+
+

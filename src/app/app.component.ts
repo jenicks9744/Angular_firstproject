@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public title:String = "Jenicks's";
   public name:String ="Jenicks"
+  name1="Rahul"
 
   public getName(){
     return this.name
@@ -23,10 +24,11 @@ export class AppComponent {
   // Array
   public arr=[10,12,45,15]
 
-  // url 
+  // url
   public url= window.location.href
 
 
-  
+// value from child component
+message="";
 
 }

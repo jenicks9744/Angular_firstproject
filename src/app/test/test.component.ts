@@ -1,4 +1,4 @@
-import { Component} from "@angular/core";
+import { Component, Input} from "@angular/core";
 
 @Component({
     selector: 'test-comp',
@@ -7,13 +7,16 @@ import { Component} from "@angular/core";
 })
 
 export class TestComponent{
+    // @input is used to call a varible value from app component to the child test component
+    @Input() 'parentName'=''
+    @Input("newvalue") public names:any
     fruit:boolean = false;
     isEnabled:boolean = false;
     public image:String ="";
     public pineApple="https://images.unsplash.com/photo-1589820296156-2454bb8a6ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGluZWFwcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
     public grape="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiaZ6Vxsm38MZ0E7QBHGRvD-n0xqU_cdT5uQ&usqp=CAU"
     public myid="testid"
-    
+
     public imgChange(){
         this.fruit = !this.fruit
         if (this.fruit){
@@ -21,7 +24,7 @@ export class TestComponent{
         }else{
             this.image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiaZ6Vxsm38MZ0E7QBHGRvD-n0xqU_cdT5uQ&usqp=CAU"
         }
-    
+
     }
 
 
@@ -29,7 +32,9 @@ export class TestComponent{
         console.log("hai hello"+this.myid)
     }
 
+
+
 }
 
 // wehave to declare it in app.module
-// then on app.html 
+// then on app.html

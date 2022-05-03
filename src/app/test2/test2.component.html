@@ -1,1 +1,15 @@
-<p>test2 works!</p>
+<!-- class binding -->
+<p>test2 Working !!</p>
+<h1 [class.italicBond] ="isApply">Class binding</h1>
+
+<!-- while giving a variable from .ts file we have to put it in [] -->
+
+
+<button (click)="onClick($event)">click here</button>
+
+<h2 [style.color]="isApply?'red':'green'">Style Binding</h2>
+<!-- on giving color directly we have to give double and inside that single quotes  -->
+
+<!-- <h3 [ngStyle] ="{color:'blue',background-color:'green'}"  >using ng style</h3> -->
+
+<!-- <h2 [ngStyle]="fontstyles"> new style</h2> -->

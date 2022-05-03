@@ -1,0 +1,8 @@
+{
+  "users":[
+  {"id":1,"name":"Anil","age":20,"salary":1000,"phone":"1234556"},
+  {"id":2,"name":"Amal","age":16,"salary":1600,"phone":"9874566"},
+  {"id":3,"name":"Basil","age":25,"salary":2000,"phone":"8795641"},
+  {"id":4,"name":"Rahul","age":34,"salary":2500,"phone":"4454285"}
+]
+}

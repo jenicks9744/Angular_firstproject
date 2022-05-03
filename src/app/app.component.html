@@ -1,16 +1,68 @@
-<h1>Welcome to my {{title}} Website</h1>
+<!-- <h1>Welcome to my {{title}} Website</h1>
 {{2+2}}
 <br>
  my name is {{getName()}}
  <br>
  <p>{{newObj.name}}
-     {{newObj.age}}   </p> 
+     {{newObj.age}}   </p>
 
 
  {{arr}}
- 
- {{url}}
+
+ {{url}} -->
+
+
+<!-- todo app -->
+ <!-- <app-todo></app-todo> -->
+
 
 <!-- Declaring test component -->
- <test-comp></test-comp>
- <app-test2></app-test2>
+ <!-- <test-comp [parentName]="name1" [newvalue]="title"></test-comp> -->
+ <!-- <app-test2></app-test2> -->
+ <!-- <app-test3></app-test3> -->
+ <!-- <app-pipes (childEvent)="message = $event"></app-pipes> -->
+<!-- {{message}} -->
+
+<!-- <app-user></app-user> -->
+
+<!-- <br><br> -->
+<!-- <app-userdetails></app-userdetails> -->
+
+<!-- after using router -->
+
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">User Management</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a routerLink="users" routerLinkActive='active' class="nav-link" href="#">Users</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="userdetails" routerLinkActive='active' class="nav-link" href="#">User Details</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="todo" routerLinkActive='active' class="nav-link" href="#">ToDo list</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="test3" routerLinkActive='active' class="nav-link" href="#">Test 3</a>
+      </li>
+      <li class="nav-item"> -->
+        <a routerLink="rxjs" routerLinkActive='active' class="nav-link" href="#">rxjs</a>
+      </li>
+      <li class="nav-item"> -->
+        <a routerLink="rxjs2" routerLinkActive='active' class="nav-link" href="#">rxjs2</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+
+
