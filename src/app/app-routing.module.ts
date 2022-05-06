@@ -10,6 +10,10 @@ import { Rxjx2Component } from './rxjx2/rxjx2.component';
 import { UserdetComponent } from './userdet/userdet.component';
 import { HomeComponent } from './home/home.component';
 import { OfficeComponent } from './office/office.component';
+import { TdfComponent } from './tdf/tdf.component';
+import {FormsModule} from '@angular/forms'
+import { MdfComponent } from './mdf/mdf.component';
+
 
 const routes:Routes = [
   {path:'',redirectTo:'rxjs',pathMatch:'full'},
@@ -20,19 +24,22 @@ const routes:Routes = [
   {path:"rxjs",component:RxjsComponent},
   {path:"rxjs2",component:Rxjx2Component},
   {path:"userdet",component:UserdetComponent},
+  {path:"mdf",component:MdfComponent},
   {path:"userdet/:id",component:UserdetComponent,
   children:[
     {path:'',redirectTo:'home',pathMatch:'full'},
     {path:"home",component:HomeComponent},
     {path:"office",component:OfficeComponent}
-  ]}
+  ]},
+  {path:"TDF",component:TdfComponent}
   ,{path:"**",redirectTo:'rxjs2'}
+
 ]
 
 
 @NgModule({
-    imports:[RouterModule.forRoot(routes)],
-    exports:[RouterModule]
+    imports:[RouterModule.forRoot(routes),FormsModule],
+    exports:[RouterModule,FormsModule]
 
 })
 export class AppRoutingModule { }

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -20,12 +20,14 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { UserdetComponent } from './userdet/userdet.component';
 import { HomeComponent } from './home/home.component';
 import { OfficeComponent } from './office/office.component';
+import { TdfComponent } from './tdf/tdf.component';
+import { MdfComponent } from './mdf/mdf.component';
 @NgModule({
   declarations: [
-    AppComponent,TestComponent, Test2Component, Test3Component, PipesComponent, TodoComponent, UserComponent, UserdetailsComponent, RxjsComponent, Rxjx2Component, AgePipe, MultiplyPipe, UserdetComponent, HomeComponent, OfficeComponent
+    AppComponent,TestComponent, Test2Component, Test3Component, PipesComponent, TodoComponent, UserComponent, UserdetailsComponent, RxjsComponent, Rxjx2Component, AgePipe, MultiplyPipe, UserdetComponent, HomeComponent, OfficeComponent, TdfComponent, MdfComponent
   ],
   imports: [
-    BrowserModule,FormsModule,HttpClientModule, AppRoutingModule, NgxPaginationModule
+    BrowserModule,FormsModule,HttpClientModule, AppRoutingModule, NgxPaginationModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
